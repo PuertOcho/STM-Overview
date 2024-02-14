@@ -4,6 +4,8 @@ Arquitectura interna de los procesadores STM32 Nucleo.
 ## Descripción general
 
 Veremos un resumen de como es la arquitectura interna de los procesadores STM32 Nucleo, lo que nos permite desarrollar programas eficientes para nuestros proyectos. Para esta explicación se tiene como base el microcontrolador **STM-32L476RGT6**.
+
+![[Pasted image 20240214174745.png|600]]
 ## Procesadores ARM
 
 La elección de un microcontrolador en particular para el desarrollo de un proyecto depende de algunos factores como los siguientes:
