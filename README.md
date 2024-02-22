@@ -40,3 +40,31 @@ La familia Cortex consta de tres familias de procesadores: Cortex-M, Cortex-R y 
 | Cortex-M1   | Diseñado principalmente para aplicaciones de matriz de puertas programables.                     |
 | Cortex-M0+  | Menor consumo de energía y mayor rendimiento que el Cortex-M0.                                    |
 | Cortex-M0   | Bajo consumo de energía, rendimiento de bajo a medio, el procesador Arm más pequeño.              |
+### Diagrama de bloques interno del procesador STM32L476xx
+
+#### Diagrama funcional
+
+![[Pasted image 20240222115933.png]]
+
+#### Configuración de pines
+
+| Pin Range | Description             |
+|-----------|-------------------------|
+| PA0 – PA15 | GPIO Port A pins        |
+| PB0 – PB15 | GPIO Port B pins        |
+| PC0 – PC15 | GPIO Port C pins        |
+| PD2       | GPIO Port D pin         |
+| PH0 – PH1 | GPIO Port H pins        |
+| VDD, VSS  | Power and ground pins   |
+| VSSA, VDDA | Reference voltage pins  |
+| NRST      | Reset pin               |
+| VBAT      | External battery pin    |
+| BOOT0     | Boot0 pin               |
+| VDD12     | External SMPS power pin |
+
+![[Pasted image 20240222120805.png]]
+#### Diagrama de bloques interno simplificado
+Hay cuatro buses principales dentro del chip, llamados AHB1, AHB2, APB1 y APB2. Los puertos GPIO y el ADC están conectados al bus AHB2 de 80 MHz. El SDIO/MMC, los temporizadores 1,8,15,16, 17, SPI1, SAI1 y SAI2 y los comparadores están conectados al bus APB2. Temporizadores 2,3,4,5,6,7, USART 2,3, UART 4,5, SP2 y SP3, e I2C1,2,3, CAN, controlador LCD, LPUART1, LPTIM1,2 DAC 1,2 y el El temporizador de vigilancia está conectado al bus APB1.
+
+![[Pasted image 20240222120906.png]]
+### Entradas y salidas de propósito general (GPIO)
